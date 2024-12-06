@@ -213,7 +213,7 @@ class CityControllerTest {
 
         verify(cityService).getCityById(1L);
     }
-    
+
 
     @Test
     void shouldDeleteCity() throws Exception {
