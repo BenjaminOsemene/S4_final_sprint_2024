@@ -22,11 +22,13 @@ public class City {
     @OneToMany(mappedBy = "city")
     private List<Passenger> passengers;
 
-    // No-argument constructor
     public City(String testCity) {
     }
 
-    // Getters and Setters
+    public City() {
+
+    }
+
     public Long getId() {
         return id;
     }

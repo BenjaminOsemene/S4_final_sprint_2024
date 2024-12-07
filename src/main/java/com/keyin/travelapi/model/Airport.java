@@ -22,6 +22,7 @@ public class Airport {
     @ManyToMany(mappedBy = "airports")
     private List<Aircraft> aircraft;
 
+
     // No-argument constructor
     public Airport() {
     }
