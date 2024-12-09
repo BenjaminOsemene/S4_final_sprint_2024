@@ -28,7 +28,8 @@ public class City {
     }
 
     // Constructor with parameter (optional)
-    public City(String testCity) {
+    public City(String name) {
+        this.name = name;
     }
 
     // Getters and Setters
