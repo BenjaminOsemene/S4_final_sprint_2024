@@ -26,6 +26,10 @@ public class City {
     public City(String testCity) {
     }
 
+    public City() {
+
+    }
+
     // Getters and Setters
     public Long getId() {
         return id;
