@@ -1,3 +1,4 @@
+
 package com.keyin.travelapi.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
@@ -22,8 +23,13 @@ public class City {
     @OneToMany(mappedBy = "city")
     private List<Passenger> passengers;
 
-    // No-argument constructor
-    public City(String testCity) {
+    // Default constructor
+    public City() {
+    }
+
+    // Constructor with parameter (optional)
+    public City(String name) {
+        this.name = name;
     }
 
     public City() {
