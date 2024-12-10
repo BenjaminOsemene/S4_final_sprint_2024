@@ -1,9 +1,10 @@
+
+
 package com.keyin.travelapi.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import java.util.List;
-
 @Entity
 @Table(name = "cities")
 public class City {
@@ -22,11 +23,15 @@ public class City {
     @OneToMany(mappedBy = "city")
     private List<Passenger> passengers;
 
-    // No-argument constructor
+    // Proper no-argument constructor
+//   public City() {
+//    }
+
+    // Optional additional constructor (not required by JPA)
     public City(String testCity) {
     }
 
-    public City() {
+ public City() {
 
     }
 
