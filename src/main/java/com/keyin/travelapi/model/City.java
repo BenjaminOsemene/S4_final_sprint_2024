@@ -32,6 +32,10 @@ public class City {
         this.name = name;
     }
 
+    public City() {
+
+    }
+
     // Getters and Setters
     public Long getId() {
         return id;
