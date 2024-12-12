@@ -1,12 +1,1 @@
-{
-  "AWSEBDockerrunVersion": "1",
-  "Image": {
-    "Name": "bosemene/final2024:1.0.0",
-    "Update": "true"
-  },
-  "Ports": [
-    {
-      "ContainerPort": "8080"
-    }
-  ]
-}
+
