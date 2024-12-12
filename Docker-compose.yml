@@ -1,115 +1,16 @@
-
-#services:
-#  mysql:
-#    image: mysql:8.0
-#    container_name: mysql-container
-#    environment:
-#      MYSQL_ROOT_PASSWORD: Keyin208
-#      MYSQL_DATABASE: travel_db
-#      MYSQL_USER: user
-#      MYSQL_PASSWORD: userpassword
-#    ports:
-#      - "3306:3306"
-#    volumes:
-#      - mysql-data:/var/lib/mysql
-#    networks:
-#      - app-network
-#
-#  app:
-#    build: .
-#    container_name: app-container
-#    depends_on:
-#      - mysql
-#    environment:
-#      SPRING_DATASOURCE_URL: jdbc:mysql://mysql:3306/travelapidb
-#      SPRING_DATASOURCE_USERNAME: root
-#      SPRING_DATASOURCE_PASSWORD: Keyin208
-#    ports:
-#      - "8080:8080"
-#    networks:
-#      - app-network
-#
-#networks:
-#  app-network:
-#    driver: bridge
-#
-#volumes:
-#  mysql-data:
-
-
-#services:
-#  mysql:
-#    image: s4_final_sprint_2024:1.0
-#    container_name: mysql-container
-#    environment:
-#      MYSQL_ROOT_PASSWORD: Keyin208
-#      MYSQL_DATABASE: travel_db
-#      MYSQL_USER: user
-#      MYSQL_PASSWORD: userpassword
-#    ports:
-#      - "3306:3306"
-#    volumes:
-#      - mysql-data:/var/lib/mysql
-#    networks:
-#      - app-network
-#
-#  app:
-#    build: .
-#    container_name: app-container
-#    depends_on:
-#      - mysql
-#    environment:
-#      SPRING_DATASOURCE_URL: jdbc:mysql://mysql:3306/travelapidb
-#      SPRING_DATASOURCE_USERNAME: root
-#      SPRING_DATASOURCE_PASSWORD: Keyin208
-#    ports:
-#      - "8080:8080"
-#    networks:
-#      - app-network
-#
-#volumes:
-#  mysql-data:
-#
-#networks:
-#  app-network:
-#    driver: bridge
-#
-#
-
-
 services:
-  mysql:
-    image: mysql:8.0
-    container_name: mysql2-container
-    environment:
-      MYSQL_ROOT_PASSWORD: Keyin208
-      MYSQL_DATABASE: travel_db
-      MYSQL_USER: user
-      MYSQL_PASSWORD: userpassword
-    ports:
-      - "3307:3306"
-    volumes:
-      - mysql-data:/var/lib/mysql
-    networks:
-      - app-network
-
   app:
     build: .
-    image: s4_final_sprint_2024:1.0
+    image: bosemene/final2024:latest
     container_name: app2-container
-    depends_on:
-      - mysql
     environment:
-      SPRING_DATASOURCE_URL: jdbc:mysql://mysql:3306/restapi
+      SPRING_DATASOURCE_URL: jdbc:mysql://finalsprintdb.cr8aqaqos0eg.us-east-1.rds.amazonaws.com/travel_db
       SPRING_DATASOURCE_USERNAME: root
-      SPRING_DATASOURCE_PASSWORD: Keyin208
+      SPRING_DATASOURCE_PASSWORD: idumubo123
     ports:
       - "8080:8080"
     networks:
       - app-network
-
-volumes:
-  mysql-data:
 
 networks:
   app-network:
